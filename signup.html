@@ -25,7 +25,7 @@
                                 person
                             </span>
                         </div>
-                        <input type="email" id="email" placeholder="Full name">
+                        <input type="text" id="name" placeholder="Full name">
                     </div>
 
                     <div class="input-container">
@@ -34,7 +34,7 @@
                                 email
                             </span>
                         </div>
-                        <input type="email" id="email" placeholder="E-mail">
+                        <input type="email" id="new_email" placeholder="E-mail">
                     </div>
 
                     <div class="input-container">
@@ -44,7 +44,7 @@
                             </span>
                         </div>
 
-                        <input type="password" id="password" placeholder="Password">
+                        <input type="password" id="new_password" placeholder="Password">
                     </div>
 
                     <div class="input-container">
@@ -54,16 +54,19 @@
                             </span>
                         </div>
 
-                        <input type="password" id="password" placeholder="Confirm password">
+                        <input type="password" id="password-confirm" placeholder="Confirm password">
                     </div>
-                    <input type="submit" id="btnLogin" class="btn" value="create account">
+                    <input type="submit" id="btnSignUp" class="btn" value="create account">
 
-                    <p class="signup">Alredy a member?
+                    <!-- <button id="btnSignUp" class="btn">Create Account</button> -->
+
+                    <p class="signup"  id="log">Alredy a member?
                         <a href="./signin.html">sign in</a>
                     </p>
                 </form>
             </div>
         </div>
+        
+        <script src="./scripts/signup.js" type="module"> </script>
     </body>
-    <script> </script>
 </html>

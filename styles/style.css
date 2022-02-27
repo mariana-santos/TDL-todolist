@@ -59,16 +59,17 @@ input:focus{
     outline: none;
 }
 
-input[type='submit']{
+.btn{
     background-color: #4E8BFE;
     padding: 12px;
     border-radius: 4px;
     text-transform: capitalize;
     color: #fff;
     transition: 0.2s;
+    border: none;
 }
 
-input[type='submit']:hover{
+.btn:hover{
     background-color: #3E6FCB;
 }
 
@@ -87,4 +88,11 @@ a{
 
 a:hover{
     color: #4E8BFE;
+}
+
+@media only screen and (max-width: 600px){
+    .login{
+        width: 100%;
+        height: 100%;
+    }
 }
