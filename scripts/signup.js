@@ -27,44 +27,45 @@ const auth = getAuth();
 const db = getFirestore();
 
 const signUp = document.getElementById('btnSignUp')
-const email = document.getElementById('new_email').value;
-const password = document.getElementById('new_password').value
-const name = document.getElementById('name').value;
-const password_confirm = document.getElementById('password-confirm').value;
-const default_phone_number = '11970707070'
+let email = document.getElementById('new_email').value;
+let password = document.getElementById('new_password').value
+let name = document.getElementById('name').value;
+let password_confirm = document.getElementById('password-confirm').value;
+let default_phone_number = '11970707070'
 
-//console.log(db)
-
-const newUser = {
-    email: email,
-    name: name, 
-    phone_number: default_phone_number
-}
-
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-  console.log(doc.data());
-});
+// const querySnapshot = await getDocs(collection(db, "users"));
+// querySnapshot.forEach((doc) => {
+//   console.log(doc.data());
+// });
 
 signUp.addEventListener('click', ()=> {
 
-    // try {
-    //     const docRef = addDoc(collection(db, "users"), newUser);
-    //     console.log("Document written with ID: ", docRef.id);
-    // } catch (e) {
-    //     console.error("Error adding document: ", e);
-    // }
+    email = document.getElementById('new_email').value;
+    password = document.getElementById('new_password').value
+    name = document.getElementById('name').value;
+    password_confirm = document.getElementById('password-confirm').value;
+
+    const newUser = {
+      email: email,
+      name: name, 
+      phone_number: default_phone_number
+    }
+
+    try {
+        const docRef = addDoc(collection(db, "users"), newUser);
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
 
     console.log(newUser)
 
-//   createUserWithEmailAndPassword(auth, email, password)
-//     .then(user => {
-//       console.log(user)
-//     })
-//     .catch(error => {
-//       throw (error)
-//     })
-
-
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(user => {
+      console.log(user)
+    })
+    .catch(error => {
+      throw (error)
+    })
 
 })
