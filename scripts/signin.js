@@ -20,13 +20,16 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 const signIn = document.getElementById('btnSignIn')
-const email = document.getElementById('email');
-const password = document.getElementById('password')
 
 signIn.addEventListener('click', ()=> {
+
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
   signInWithEmailAndPassword(auth, email, password)
     .then(user => {
-      console.log(user)
+      console.log(user);
+      location = 'index.html'
     })
     .catch(error => {
       throw (error)

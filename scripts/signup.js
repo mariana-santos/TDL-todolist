@@ -63,6 +63,7 @@ signUp.addEventListener('click', ()=> {
   createUserWithEmailAndPassword(auth, email, password)
     .then(user => {
       console.log(user)
+      location = 'index.html'
     })
     .catch(error => {
       throw (error)

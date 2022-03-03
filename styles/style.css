@@ -11,6 +11,23 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(90deg, #b7e9f3, rgb(118, 181, 218), #597fc5);
+    background-size: 180% 180%;
+    animation: background 8s infinite ease;
+}
+
+@keyframes background {
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 .login{
@@ -61,12 +78,14 @@ input:focus{
 
 .btn{
     background-color: #4E8BFE;
+    width: 100%;
     padding: 12px;
     border-radius: 4px;
     text-transform: capitalize;
     color: #fff;
     transition: 0.2s;
     border: none;
+    font-size: 1rem;
 }
 
 .btn:hover{
