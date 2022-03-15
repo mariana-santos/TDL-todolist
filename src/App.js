@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+import './App.css';
+import Form from './components/Form'
+import Input from './components/Input'
+import Button from './components/Button'
+
+// import { FirebaseService } from './services/firebaseServices'
+
+export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    // FirebaseService.getDataList('leituras', (dataReceived) => this.setState({data: dataReceived}))
+  }
+
+  render(){
+  return (   
+    <div className="container">
+
+      <Form title="Login with your email">
+
+        <Input type='email' id='email' placeholder='E-mail' iconName='envelope'/>
+        <Input type='password' id='password' placeholder='Password' iconName='lock'/>
+
+        <Button id='btnSignIn' name='Sign In'></Button>
+
+        <p className="signup">Not a member?
+          <a href="./signup.html"> sign up</a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </Form>
+
     </div>
   );
+  }
 }
-
-export default App;
