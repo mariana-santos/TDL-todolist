@@ -1,0 +1,32 @@
+input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.input-container{
+    display: flex;
+    border-bottom: solid 1px #ccc;
+    margin-bottom: 24px;
+}
+
+.input-container:hover{
+    border-bottom: solid 1px #4E8BFE;
+}
+
+.div-icon{
+    display: flex;
+    align-items: center;
+}
+
+.div-icon i{
+    color: #3E6FCB;
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: none;
+}

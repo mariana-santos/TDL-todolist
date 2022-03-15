@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body{
+  margin: 0;
+  font-family: 'Nunito';
+  color: #444;
+  background-color: #eee;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #b7e9f3, rgb(118, 181, 218), #597fc5);
+  background-size: 180% 180%;
+  animation: background 8s infinite ease;
+}
+
+a{
+  color: #3E6FCB;
+  text-decoration: none;
+}
+
+.signup{
+  margin-bottom: 0;
+}
+
+a:hover{
+  color: #4E8BFE;
+}
